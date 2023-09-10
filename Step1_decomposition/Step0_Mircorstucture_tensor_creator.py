@@ -7,7 +7,7 @@ import os
 ############################################################
 ### Opening Exodus File (Output result from simulation)
 
-path = os.path.abspath('../phase_field_simulation/exodus_files/Ti_Cr.e')
+path = os.path.abspath('../Step0_phase_field_simulation/exodus_files/Ti_Cr.e')
 
 model = netCDF4.Dataset(path)
 
