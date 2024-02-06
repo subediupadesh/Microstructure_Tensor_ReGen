@@ -8,14 +8,14 @@ import matplotlib.pyplot as plt
 
 ##########################################################################################
 path_nonelastic = os.path.abspath('../Step0_phase_field_simulation/nonelastic/exodus_files/Ti_Cr_non_elastic.e')
-path_elastic = os.path.abspath('../Step0_phase_field_simulation/elastic/exodus_files/Ti_Cr_elastic.e')
+path_elastic = os.path.abspath('../Step0_phase_field_simulation/elastic/Cr_80P/exodus_files/Ti_Cr_elastic.e')
 
 ############################### For Model without elastic Effect #########################
 model = netCDF4.Dataset(path_nonelastic)
 
 X_all = model.variables['coordx'][:]
 Y_all = model.variables['coordy'][:]
-c = model.variables['vals_nod_var2'][:]
+c = model.variables['vals_nod_var1'][:]
 
 points = np.vstack([X_all,Y_all,c]).T
 column_names = ['X', 'Y'] + list(range(c.shape[0]))
@@ -38,7 +38,7 @@ np.save('noelastic_tensor.npy', npa_noelastic)
 
 ############################### For Model with elastic Effect #########################
 
-path_csv = os.path.abspath('../Step0_phase_field_simulation/elastic/exodus_files/csv_files/')
+path_csv = os.path.abspath('../Step0_phase_field_simulation/elastic/Cr_80P/exodus_files/csv_files/')
 csv_files = natsorted(glob.glob(path_csv+'/*.csv'))  # Importing csv files of simulation naturally sorted
 
 df_t0 = pd.read_csv(csv_files[0])
