@@ -187,7 +187,7 @@
 
   [TensorMechanics]
     displacements = 'disp_x disp_y'
-    # 2 new lines form Puffin 2d
+    # Plane Strain assumption means strain in the z-direction = 0
     planar_formulation = PLANE_STRAIN
     use_displaced_mesh = false
   []
