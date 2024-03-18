@@ -345,7 +345,7 @@
   []
 
 
-  [switching_function]
+  [switching_function] # interpolation function 
     type = ParsedMaterial
     f_name = h
     args = 'c'
