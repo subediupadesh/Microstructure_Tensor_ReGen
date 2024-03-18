@@ -20,7 +20,7 @@
     order = FIRST
     family = LAGRANGE
   []
-  [w]   # Chemical potential (eV/mol)
+  [w]   # Diffusion potential (eV/mol)
     order = FIRST
     family = LAGRANGE
   []
