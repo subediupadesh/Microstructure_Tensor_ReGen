@@ -20,7 +20,7 @@
     order = FIRST
     family = LAGRANGE
   []
-  [w]   # Chemical potential (eV/mol)
+  [w]   # Diffusion potential (eV/mol)
     order = FIRST
     family = LAGRANGE
   []
@@ -187,7 +187,7 @@
 
   [TensorMechanics]
     displacements = 'disp_x disp_y'
-    # 2 new lines form Puffin 2d
+    # Plane Strain assumption means strain in the z-direction = 0
     planar_formulation = PLANE_STRAIN
     use_displaced_mesh = false
   []
@@ -345,7 +345,7 @@
   []
 
 
-  [switching_function]
+  [switching_function] # interpolation function 
     type = ParsedMaterial
     f_name = h
     args = 'c'
