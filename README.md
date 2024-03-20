@@ -1,5 +1,5 @@
 # Rapid portabilization of elasto-chemical evolution data for dental Ti-Cr alloy microstructure through sparsification and tensor computation 
-[![Paper](https://img.shields.io/badge/PDF-white?logo=elsevier
+[![Paper](https://img.shields.io/badge/Research_Paper-PDF-orange?style=for-the-badge&logo=elsevier
 )](https://doi.org/10.1016/j.scriptamat.2024.116027)
 
 ## Graphical Abstract
