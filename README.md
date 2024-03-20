@@ -1,5 +1,4 @@
 # Rapid portabilization of elasto-chemical evolution data for dental Ti-Cr alloy microstructure through sparsification and tensor computation 
-## Scripta Materialia
 [Upadesh Subedi](https://www.linkedin.com/in/upadesh-s-0b321a15b/),
 [Nele Moelans](https://www.linkedin.com/in/nele-moelans-57b1731/),
 [Tomasz Tański](https://www.linkedin.com/in/tomasz-tanski-888bb266/),
