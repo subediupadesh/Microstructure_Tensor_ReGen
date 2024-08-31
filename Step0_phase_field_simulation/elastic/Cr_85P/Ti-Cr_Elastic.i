@@ -353,16 +353,35 @@
     function =  '1/(1+exp(-10*(2*c-1)))'
   []
 
+  #######################################################
+  [elasticity_interpolation] #Interpolation function
+    type = ParsedMaterial
+    f_name = fel
+    material_property_names = 'h'
+    args = 'c'
+    function =  'h*fel1+(1-h)*fel2'
+  []
+ ########################################################
   # [switching]
   #   type = SwitchingFunctionMaterial
   #   eta = c1
   # []
-
+#########################################################
+  #[F_1]
+  #  type = DerivativeSumMaterial
+  #  f_name = f_loc
+  #  args = 'c'
+  #  sum_materials = 'Fch1 fel1 fel2' #'Fch1 fel1'
+  #  #sum_materials = 'fch0'
+  #  outputs = exodus
+  #[]
+############################################################
   [F_1]
     type = DerivativeSumMaterial
     f_name = f_loc
+    material_property_names = 'fel'
     args = 'c'
-    sum_materials = 'Fch1 fel1 fel2' #'Fch1 fel1'
+    sum_materials = 'Fch1 fel' #'Fch1 fel1'
     #sum_materials = 'fch0'
     outputs = exodus
   []
