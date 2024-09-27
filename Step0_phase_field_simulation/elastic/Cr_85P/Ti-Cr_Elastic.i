@@ -357,7 +357,7 @@
   [elasticity_interpolation] #Interpolation function
     type = ParsedMaterial
     f_name = fel
-    material_property_names = 'h'
+    material_property_names = 'h fel1 fel2'
     args = 'c'
     function =  'h*fel1+(1-h)*fel2'
   []
